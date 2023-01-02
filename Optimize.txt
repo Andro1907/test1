@@ -1,71 +1,60 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace ConsoleApp3
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            Console.Write("Enter a number: ");
-            string number = Console.ReadLine();
-            int num = Int32.Parse(number);
-            stopwatch.Start();
-            NthPrime(num);
-            stopwatch.Stop();
+namespace ConsoleApp3 {
+
+   class Program {
+       static void Main (string[] args) {
+            Stopwatch stopwatch = new Stopwatch ();
+            Console.Write ("Enter a number: ");
+            string number = Console.ReadLine ();
+            int num = Int32.Parse (number);
+            stopwatch.Start ();
+            NthPrime (num);
+            stopwatch.Stop ();
             var elapsed = stopwatch.ElapsedMilliseconds;
-            Console.WriteLine("The computation took {0} ms", elapsed);
+            Console.WriteLine ("The computation took {0} ms", elapsed);
         }
 
-
-        static int Check(int n)
-        {
-            if ((n <= 1))
-            {
+        static int Check (int n) {
+            if (n <= 1) {
                 return 0;
             }
-            if (n == 2 || n == 3)
-            {
+
+            if (n == 2 || n == 3) {
                 return 1;
             }
-            if (n % 2 == 0 || n % 3 == 0)
-            {
+
+            if (n % 2 == 0 || n % 3 == 0) {
                 return 0;
             }
 
-            for (int i = 5; i * i <= n; i += 6)
-            {
-                if (n % i == 0 || n % (i + 2) == 0)
-                {
+            for (int i = 5; i * i <= n; i += 6) {
+
+                if (n % i == 0 || n % (i + 2) == 0) {
                     return 0;
                 }
             }
             return 1;
         }
 
-        static void NthPrime(int num)
-        {
-            var primes = new List<int>();
+        static void NthPrime (int num) {
+            var primes = new List<int> ();
             int count1 = 0;
             int j = 2;
-            while (j > 0)
-            {
-                if (count1 == num)
-                {
+            while (j > 0) {
+                if (count1 == num) {
                     break;
                 }
 
-                if (Check(j)==1)
-                {
-                    primes.Add(j);
+                if (Check (j) == 1) {
+                    primes.Add (j);
                     count1++;
                 }
                 j++;
             }
-            Console.WriteLine("The required number is {0}", primes.Last());
+            Console.WriteLine ("The required number is {0}", primes.Last());
         }
     }
 }
