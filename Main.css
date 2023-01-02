@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    position: fixed;
+}
+
+.buttons{
+    width:300px;
+    text-align: left;
+    margin-bottom: 80px;
+}
+
+#time{
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+.btn{
+    width:80px;
+    border-radius: 200%;
+    padding:10px;
+}
+
+#start{
+    position: fixed;
+}
+
+#reset{
+    margin-left: 100px;
+    position: fixed;
+}
+
+#split{
+    margin-left: 200px;
+    position: fixed;
+}
+
+.change{
+    font-size: 20px;
+}
+
+.scroll{
+        margin:10px, 10px;
+        padding:4px;
+        width: 400px;
+        height: 110px;
+        overflow-y: auto;
+        text-align:center;
+        background-color: aliceblue;
+        border-radius: 8px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stop watch</title>
+        <link rel="stylesheet" href="Main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="time">
+                <span class="demo" id="hr">00</span>
+                <span class="change">Hr</span>
+                <span class="demo" id="min">00</span>
+                <span class="change">Min</span>
+                <span class="demo" id="sec">00</span>
+                <span class="change">Sec</span>
+                <span class="demo" id="milli">00</span>
+            </div>
+            <div class="buttons">
+                <p>
+                <button class="btn" id="start">Start</button>
+                <button class="btn" id="reset" onclick="removeHandler()">Reset</button>
+                <button class="btn" id="split" hidden>Split</button>
+                </p>
+            </div>
+            <div class="scroll">
+                <ol id="results">
+                </ol>
+            </div>
+        </div>
+        <script src="Watch.js"></script>
+    </body>
+</html>
