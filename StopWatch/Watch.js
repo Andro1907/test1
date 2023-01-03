@@ -1,6 +1,5 @@
 let startBtn = document.getElementById("start");
 let resetBtn = document.getElementById("reset");
-let splitBtn = document.getElementById("split");
 let run = false;
 let hour = 0;
 let minute = 0;
@@ -10,36 +9,29 @@ let millisec = 0;
 function initMethod() {
     console.log("Init Method");
     startBtn.addEventListener("click", function () {
-
         if (!run) {
             run = true;
+            document.getElementById("reset").innerHTML="Split";
             document.getElementById("reset").hidden = false;
-            document.getElementById("split").hidden = false;
             console.log("Running...");
             document.getElementById("start").innerHTML = "Pause";
-        } else {
-            // console.log("Already Running...");
+            stopWatch();
+           
+        } else if(run){
+            run=false;
             document.getElementById("start").innerHTML = "Resume";
+            document.getElementById("reset").innerHTML= "Reset";
             run = false;
         }
-        stopWatch();
+       
+       
     });
-
-    splitBtn.addEventListener("click", myFunction);
 
     resetBtn.addEventListener("click", myFunction1);
 }
 
-function myFunction1() {
-    if(run) return;
-    run = false;
-    document.getElementById("start").innerHTML = "Start";
-    document.getElementById("split").hidden = true;
-    document.getElementById("reset").hidden = true;
-    clear();
-}
 
-function myFunction() {
+function myFunction1() {
     if(run){
     let first = document.getElementById("hr").innerHTML;
     let secondE = document.getElementById("min").innerHTML;
@@ -49,11 +41,18 @@ function myFunction() {
     var completeList=document.getElementById("results");
     completeList.innerHTML+="<li>"+answer+"</li>";
     }
+    else{
+        run = false;
+        document.getElementById("start").innerHTML = "Start";
+        document.getElementById("reset").hidden = true;
+        clear();
+    }
 }
 
 
 function stopWatch() {
     if (run) {
+       
         millisec++;
 
         if (millisec == 100) {
@@ -102,7 +101,7 @@ function stopWatch() {
 
 
 function clear() {
-    if (run == false) {
+    if (!run) {
         hour = 0;
         minute = 0;
         second = 0;
@@ -113,7 +112,6 @@ function clear() {
         document.getElementById("sec").innerHTML = "00";
         document.getElementById("milli").innerHTML = "00";
         document.getElementById("results").innerHTML="";
-        document.getElementById("result").innerHTML = "";
     }
 }
 
