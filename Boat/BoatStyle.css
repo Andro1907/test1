@@ -1,0 +1,63 @@
+input[type="number"] {
+    width: 98%;
+}
+
+input[type="text"] {
+    width: 98%;
+}
+input[type="email"] {
+    width: 98%;
+}
+
+input[type="tel"] {
+    width: 98%;
+}
+
+select {
+    width: 98%;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-size: 60%;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1 {
+    background-color: green;
+    color: #FFFFFF;
+    font-family: CourierNew;
+    font-style: italic;
+    text-align: center;
+}
+
+td,
+th {
+    border: 1pxsolid#ddd;
+    padding: 8px;
+}
+
+#some{
+    background-color: aquamarine;
+    height:400px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submit{
+   margin-left:1%;
+   margin-top:5%;
+}
+#create{
+    height:70%;
+}
+table{
+    margin-left:20%;
+}

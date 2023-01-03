@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boat Riding</title>
+    <link rel="stylesheet" href="BoatStyle.css">
+</head>
+<body>
+    <div id="some">
+        <h1>Boat Riding</h1>
+        <form onsubmit=" return bookRide()">
+            <table>
+                <tr>
+                    <td>CustomerName</td>
+                    <td><input type="text" id="cname" name="cname" placeholder="Customer Name" required/></td>
+                </tr>
+                <tr>
+                    <td>PhoneNumber</td>
+                    <td><input type="tel" id="phno" name="phno" placeholder="Phone Number" required/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="email" name="email" placeholder="Email" required/></td>
+                </tr>
+                <tr>
+                    <td>NumberofPersons</td>
+                    <td><input type="text" id="noOfPersons" name="noOfPersons" placeholder="NumberofPersons" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>BoatType</td>
+                    <td><select id="btype" name="btype">
+                            <option id="2seater" value="2SeaterBoat">2SeaterPedalBoat</option>
+                            <option id="4seater" value="4SeaterBoat">4SeaterPedalBoat</option>
+                            <option id="8seater" value="8SeaterBoat">8SeaterMotorBoat</option>
+                            <option id="15seater" value="15SeaterBoat">15SeaterMotor
+                                Boat</option>
+                        </select></td><br>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submit" name="submit" value="Book Ride"></td>
+                    <td><button type="reset" id="reset" name="reset" onclick="return erase()">Clear</button></td>
+                </tr>
+            </table>
+        
+        <p id="result"></p>
+        </form>
+    </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
