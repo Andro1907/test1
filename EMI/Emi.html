@@ -1,0 +1,37 @@
+<!-- REFERENCES:
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+     <title>EMI Calculator</title>
+     <link rel="stylesheet" href="Decor.css">
+     <script type="text/javascript" src="Perform.js"></script>
+   </head>
+    <body>
+        <form onsubmit="return calculateEMI();">
+        <h1>EMI Calculator</h1>
+        <table>
+         	<tr>
+                <td><label>Principal Amount in Rs.</label></td>
+                <td><input type="number" id="principalAmount" placeholder="Principal Amount" required></td>
+            </tr>
+            <tr>
+                <td><label>Interest Per Annum</label></td>
+                <td><input type="number" id="interestRate" placeholder="Interest Per Annum" required></td>
+            </tr>
+             <tr>
+                <td><label>Tenure in Months</label></td>
+                <td><input type="number" id="tenure" placeholder="Tenure in Months" required></td>
+            </tr>
+            <tr>
+             <td class="set"><input type="submit" id="submit" name="submit" value="Calculate" > </td>
+             <td class="set"><button type="reset" id="reset" name="reset" onclick="return erase()">Clear</button></td>
+            </tr>
+            <tr>
+             <td> <p id="result"></p> </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
