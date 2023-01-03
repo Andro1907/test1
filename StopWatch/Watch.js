@@ -1,5 +1,4 @@
 let startBtn = document.getElementById("start");
-let pauseBtn = document.getElementById("pause");
 let resetBtn = document.getElementById("reset");
 let splitBtn = document.getElementById("split");
 let run = false;
@@ -14,6 +13,7 @@ function initMethod() {
 
         if (!run) {
             run = true;
+            document.getElementById("reset").hidden = false;
             document.getElementById("split").hidden = false;
             console.log("Running...");
             document.getElementById("start").innerHTML = "Pause";
@@ -35,14 +35,9 @@ function myFunction1() {
     run = false;
     document.getElementById("start").innerHTML = "Start";
     document.getElementById("split").hidden = true;
+    document.getElementById("reset").hidden = true;
     clear();
 }
-
-function removeHandler() {
-    document.getElementById("result").innerHTML = "";
-}
-
-
 
 function myFunction() {
     if(run){
@@ -118,6 +113,7 @@ function clear() {
         document.getElementById("sec").innerHTML = "00";
         document.getElementById("milli").innerHTML = "00";
         document.getElementById("results").innerHTML="";
+        document.getElementById("result").innerHTML = "";
     }
 }
 
